@@ -5,6 +5,18 @@
 
 <br>
 
+# From this 👇
+
+![alt text](https://github.com/BogdanTopalov/Travel-Agency-Azure-Pipeline/blob/main/images/reservations_data_preview.png "reservations data")
+
+
+# To this 👇
+
+![alt text](https://github.com/BogdanTopalov/Travel-Agency-Azure-Pipeline/blob/main/gifs/Travel%20Agency%20General%20Dashboard.gif "dashboard")
+
+<br>
+
+
 🧩 **The problem:**  
 
 The travel agency have all kind of booking information across different database tables.  
