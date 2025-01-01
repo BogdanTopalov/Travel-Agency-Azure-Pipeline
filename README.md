@@ -105,4 +105,4 @@ GO
 - Airline metrics example
 ![](https://github.com/BogdanTopalov/Travel-Agency-Azure-Pipeline/blob/main/gifs/Travel%20Agency%20Airline%20Dashboard.gif)
 
-📓 [Travel Agency Dashboard PDF](https://github.com/BogdanTopalov/Travel-Agency-Azure-Pipeline/blob/main/dashboard/travel_agency_dashboard.pdf)
+📓 [Travel Agency Report PDF](https://github.com/BogdanTopalov/Travel-Agency-Azure-Pipeline/blob/main/dashboard/travel_agency_dashboard.pdf)
