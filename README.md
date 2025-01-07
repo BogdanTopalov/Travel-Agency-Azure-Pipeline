@@ -60,6 +60,54 @@ The agency needs structured data to create reports and track its KPIs.
 ### 3️⃣  
 **Create Azure Databricks cluster, workspace and two notebooks**
 - [bronze_to_silver notebook](https://github.com/BogdanTopalov/Travel-Agency-Azure-Pipeline/blob/main/databricks/bronze-to-silver.ipynb)
+  - **Firstly, each table column names are converted from Camel case to Snake case**
+
+  - **Reservations table**  
+    
+  | ReservationCreatedAt | ReservationId | CustomerId | FlightId | HotelId | RoomType | TotalPrice | PaymentMethod |
+  |:-----------------------|----------------:|-------------:|-----------:|----------:|:-----------|:-------------|:----------------|
+  | 2024-03-11 16:42:00 | 1446 | 7505 | 1926 | 636 | Single | 9460.83BGN | Credit Card |
+  | 2024-05-09 14:40:47 | 1326 | 3254 | 8436 | 240 | Double | 7687.94BGN | PayPal |
+  | 2024-02-12 16:47:52 | 1315 | 3545 | 5542 | 681 | Suite | 9870.13USD | Credit Card |
+  | 2023-11-27 13:31:59 | 2936 | 7005 | 9672 | 855 | Double | 3302.29GBP | Credit Card |
+  | 2024-09-21 08:05:44 | 2980 | 5857 | 6894 | 447 | Double | 1217.77EUR | Credit Card |
+  
+  👇
+
+  | reservation_created_at | reservation_date | reservation_time | reservation_id | customer_id | flight_id | hotel_id | room_type | payment_method | total_price | total_price_amount | total_price_currency | total_price_in_eur |
+  | -------- | ------- | -------- | ------- | -------- | ------- | -------- | ------- | -------- | ------- | -------- | ------- | ------- |
+  | 2024-03-11 16:42:00 |	2024-03-11 | 16:42 | 1446 | 7505 | 1926 | 636 | Single | Credit Card  | 9460.83BGN | 9460.83 | BGN | 4825.02 |
+  | 2024-05-09 14:40:47 | 2024-05-09 | 14:40 | 1326 | 3254 | 8436 | 240 | Double | PayPal | 7687.94BGN | 7687.94 | BGN | 3920.85 |
+  | 2024-02-12 16:47:52	| 2024-02-12 | 16:47 | 1315 | 3545 | 5542 | 681 | Suite | Credit Card | 9870.13USD | 9870.13 | USD | 9376.62 |
+  | 2023-11-27 13:31:59 | 2023-11-27 | 13:31 | 2936 | 7005 | 9672 | 855 | Double | Credit Card | 3302.29GBP | 3302.29 | GBP | 3962.75 |
+  | 2024-09-21 08:05:44 | 2024-09-21 | 08:05 | 2980 | 5857 | 6894 | 447 | Double | Credit Card | 1217.77EUR | 1217.77 | EUR | 1217.77 |
+
+<br>
+
+  - **Flights table**  
+
+  | flight_id | flight | flight_departure | airport |
+  | ------- | -------- | ------- | ------- |
+  | 1926 | CD456-Ozu(Airbus A320) | 1718728920000 | CPR&#124;Casper-Natrona County International Airport |
+  | 8436 | KL333-Jabbertype(Boeing 737) | 1723819247000 | KSU&#124;Kristiansund Airport (Kvernberget) |
+  | 5542 | EF789-Jayo(Airbus A380) | 1716310072000 | PBE&#124;Puerto Berrio Airport |
+  | 1196 | IJ222-Feedbug(Airbus A320) | 1730629337000 | VDI&#124;Vidalia Regional Airport |
+  | 9672 | CD456-Ozu(Boeing 787) | 1709645519000 | YQC&#124;Quaqtaq Airport |
+
+  👇
+
+  ...
+
+<br>
+
+  - **Hotels table**
+
+<br>
+
+  - **Customers table**
+
+<br>
+
 - [silver_to_gold notebook](https://github.com/BogdanTopalov/Travel-Agency-Azure-Pipeline/blob/main/databricks/silver_to_gold.ipynb)
 - Add notbook block for each databricks one and triger the Data Factory pipeline
 ![alt text](https://github.com/BogdanTopalov/Travel-Agency-Azure-Pipeline/blob/main/images/data_factory_pipeline.png "data factory pipeline")
