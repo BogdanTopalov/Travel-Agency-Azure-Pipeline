@@ -44,7 +44,7 @@ The agency needs structured data to create reports and track its KPIs.
 ### 1️⃣  
 **Create initial resources and linked services in the Azure environment**  
 - Create resource group with all the needed tools - Data Factory, Databricks, Synapse Analytics, Key Vaults
-- Link the azure services to the on-premise server
+- Link the azure services to the on-premise server (Used Integration Runtime service to connect the local server with the cloud)
 - Create storage account and configure 3 layer containers - bronze (raw), silver (transformed), gold (structured/ready for analysis)
 
 <br>
@@ -52,7 +52,7 @@ The agency needs structured data to create reports and track its KPIs.
 ### 2️⃣  
 **Create a pipeline in Azure Data Factory**
 - Get all on-premises tables info using Lookup block
-- Copy the data into the bronze layer container using For Each block 
+- Copy the data into the bronze layer container using the For Each block  
 
 <br>
 
