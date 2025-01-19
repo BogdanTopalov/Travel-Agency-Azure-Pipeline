@@ -34,7 +34,7 @@ The agency needs structured data to create reports and track its KPIs.
 5️⃣ Use the processed/structured data to create personalized report in Power BI  
 
 > [!NOTE]
-> 💡 The data in this project is not real. It is created on random using [Mockaroo Random Data Generator](https://www.mockaroo.com/) and [Faker](https://faker.readthedocs.io/en/master/) Python package.  
+> 💡 The data in this project is not real. It is created on random using [Mockaroo Random Data Generator](https://www.mockaroo.com/).  
 > 💡 The process can be automated to run once every day which will guarantee that everyone will have accurate and up to date data.
 
 <br>
